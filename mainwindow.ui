@@ -1,0 +1,228 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>802</width>
+    <height>602</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>WC Viewer</string>
+  </property>
+  <widget class="QWidget" name="centralWidget">
+   <layout class="QGridLayout" name="gridLayout">
+    <item row="0" column="0" rowspan="2" colspan="2">
+     <widget class="WC_Ping_Viewer" name="ping_viewer" native="true">
+      <property name="sizePolicy">
+       <sizepolicy hsizetype="MinimumExpanding" vsizetype="MinimumExpanding">
+        <horstretch>0</horstretch>
+        <verstretch>0</verstretch>
+       </sizepolicy>
+      </property>
+      <property name="autoFillBackground">
+       <bool>true</bool>
+      </property>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QMenuBar" name="menuBar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>802</width>
+     <height>23</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menuFile">
+    <property name="title">
+     <string>File</string>
+    </property>
+    <addaction name="actionOpen"/>
+    <addaction name="actionSave"/>
+   </widget>
+   <widget class="QMenu" name="menuEM_Series">
+    <property name="title">
+     <string>EM Series</string>
+    </property>
+    <widget class="QMenu" name="menuWC">
+     <property name="title">
+      <string>WC</string>
+     </property>
+     <addaction name="actionWCD"/>
+     <addaction name="actionWCD2avi"/>
+     <addaction name="actionWC_AS"/>
+     <addaction name="actionWCO"/>
+    </widget>
+    <addaction name="actionImage"/>
+    <addaction name="actionSVP"/>
+    <addaction name="actionPBXYZ"/>
+    <addaction name="actionAngel_Range"/>
+    <addaction name="menuWC"/>
+    <addaction name="actionPing_Viewer"/>
+   </widget>
+   <widget class="QMenu" name="menuControl">
+    <property name="title">
+     <string>Control</string>
+    </property>
+    <addaction name="actionNext"/>
+    <addaction name="actionInterpolate"/>
+   </widget>
+   <addaction name="menuFile"/>
+   <addaction name="menuEM_Series"/>
+   <addaction name="menuControl"/>
+  </widget>
+  <widget class="QToolBar" name="mainToolBar">
+   <attribute name="toolBarArea">
+    <enum>TopToolBarArea</enum>
+   </attribute>
+   <attribute name="toolBarBreak">
+    <bool>false</bool>
+   </attribute>
+   <addaction name="actionOpen"/>
+   <addaction name="actionSave"/>
+   <addaction name="actionWCO"/>
+   <addaction name="actionWC_AS"/>
+   <addaction name="actionPing_Viewer"/>
+  </widget>
+  <widget class="QStatusBar" name="statusBar"/>
+  <widget class="QDockWidget" name="dockWidget">
+   <attribute name="dockWidgetArea">
+    <number>1</number>
+   </attribute>
+   <widget class="QWidget" name="dockWidgetContents">
+    <layout class="QVBoxLayout" name="verticalLayout">
+     <item>
+      <widget class="QTextEdit" name="basicInfoTextEdit">
+       <property name="sizePolicy">
+        <sizepolicy hsizetype="Minimum" vsizetype="Minimum">
+         <horstretch>0</horstretch>
+         <verstretch>0</verstretch>
+        </sizepolicy>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="TracklineViewer" name="track_viewer" native="true">
+       <property name="sizePolicy">
+        <sizepolicy hsizetype="Preferred" vsizetype="MinimumExpanding">
+         <horstretch>0</horstretch>
+         <verstretch>0</verstretch>
+        </sizepolicy>
+       </property>
+       <property name="autoFillBackground">
+        <bool>true</bool>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </widget>
+  </widget>
+  <action name="actionOpen">
+   <property name="text">
+    <string>Open</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+O</string>
+   </property>
+  </action>
+  <action name="actionSave">
+   <property name="text">
+    <string>Save</string>
+   </property>
+  </action>
+  <action name="actionImage">
+   <property name="text">
+    <string>Image</string>
+   </property>
+  </action>
+  <action name="actionSidescan">
+   <property name="text">
+    <string>Sidescan</string>
+   </property>
+  </action>
+  <action name="actionSonic">
+   <property name="text">
+    <string>Sonic</string>
+   </property>
+  </action>
+  <action name="actionWCD">
+   <property name="text">
+    <string>WCD</string>
+   </property>
+  </action>
+  <action name="actionSVP">
+   <property name="text">
+    <string>SVP</string>
+   </property>
+  </action>
+  <action name="actionPBXYZ">
+   <property name="text">
+    <string>PBXYZ</string>
+   </property>
+  </action>
+  <action name="actionAngel_Range">
+   <property name="text">
+    <string>Angel&amp;Range</string>
+   </property>
+  </action>
+  <action name="actionWCD2avi">
+   <property name="text">
+    <string>WCD2avi</string>
+   </property>
+  </action>
+  <action name="actionWC_AS">
+   <property name="text">
+    <string>WC_AS</string>
+   </property>
+  </action>
+  <action name="actionWCO">
+   <property name="text">
+    <string>WCO</string>
+   </property>
+  </action>
+  <action name="actionNext">
+   <property name="text">
+    <string>Next</string>
+   </property>
+  </action>
+  <action name="actionInterpolate">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="checked">
+    <bool>false</bool>
+   </property>
+   <property name="text">
+    <string>Interpolate</string>
+   </property>
+  </action>
+  <action name="actionPing_Viewer">
+   <property name="text">
+    <string>Ping Viewer</string>
+   </property>
+  </action>
+ </widget>
+ <layoutdefault spacing="6" margin="11"/>
+ <customwidgets>
+  <customwidget>
+   <class>WC_Ping_Viewer</class>
+   <extends>QWidget</extends>
+   <header>wc_ping_viewer.h</header>
+   <container>1</container>
+  </customwidget>
+  <customwidget>
+   <class>TracklineViewer</class>
+   <extends>QWidget</extends>
+   <header>trackline_viewer.h</header>
+   <container>1</container>
+  </customwidget>
+ </customwidgets>
+ <resources/>
+ <connections/>
+</ui>
